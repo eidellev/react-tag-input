@@ -24,6 +24,9 @@
   "homepage": "https://github.com/eidellev/react-tag-input#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/prompt-cli": "^13.2.1",
     "@deanc/esbuild-plugin-postcss": "^1.0.1",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
