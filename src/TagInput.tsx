@@ -1,4 +1,5 @@
 import React from 'react';
+import './TagInput.css';
 
 export interface TagInputProps {
   options?: string[];
@@ -7,5 +8,9 @@ export interface TagInputProps {
 }
 
 export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInputProps) => {
-  return <div></div>;
+  return (
+    <div className="tag-input">
+      <div className="nested"></div>
+    </div>
+  );
 };

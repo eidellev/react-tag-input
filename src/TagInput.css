@@ -1,0 +1,12 @@
+.tag-input {
+  width: 250px;
+  border: 1px solid orange;
+  padding: 10px;
+  border-radius: 10px;
+
+  .nested {
+    width: 50px;
+    border: 1px solid red;
+    padding: 10px;
+  }
+}
