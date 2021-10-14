@@ -6,6 +6,6 @@ interface Props {
   className?: string;
 }
 
-export const TagInput : React.FunctionComponent<Props> = (props: Props) => {
-  return <div></div>
-}
+export const TagInput: React.FunctionComponent<Props> = (props: Props) => {
+  return <div></div>;
+};
