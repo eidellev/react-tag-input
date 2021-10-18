@@ -1,10 +1,24 @@
+import { useState } from 'react';
 import { Meta, Story } from '@storybook/addon-docs';
 import { TagInput } from './TagInput';
 
 <Meta title="Components/TagInput" />
 
+export const TagInputStoryWrapper = () => {
+  const [value, setValue] = useState(['work', 'personal', 'school']);
+  return (
+    <TagInput
+      value={value}
+      onChange={(newValue) => setValue(newValue)}
+      options={['project X', 'project Y']}
+      colorize
+      placeholder="Enter a new tag"
+    />
+  );
+};
+
 # Tag Input
 
 <Story name="Basic">
-  <TagInput />
+  <TagInputStoryWrapper />
 </Story>

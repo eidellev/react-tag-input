@@ -1,12 +1,41 @@
 .tag-input {
-  width: 250px;
-  border: 1px solid orange;
-  padding: 10px;
-  border-radius: 10px;
+  --border-color: #ccc;
+  --radius: 4px;
+  --focus: #86b7fe;
+  --focus-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.25);
 
-  .nested {
-    width: 50px;
-    border: 1px solid red;
-    padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+
+  &:focus-within {
+    border-color: var(--focus);
+    outline: 0;
+    box-shadow: var(--focus-shadow);
+  }
+
+  & .tag {
+    color: white;
+    margin-right: 2px;
+    padding: 2px 8px;
+    text-align: center;
+    border-radius: var(--radius);
+
+    & .remove-tag-button {
+      margin-left: 4px;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+  }
+
+  & .new-tag {
+    background: none;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }

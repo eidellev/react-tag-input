@@ -1,3 +1,14 @@
 module.exports = {
-  plugins: [require('postcss-nested'), require('autoprefixer')],
+  plugins: [
+    [
+      'postcss-preset-env',
+      {
+        stage: 3,
+        features: {
+          'nesting-rules': true,
+        },
+      },
+    ],
+    require('autoprefixer'),
+  ],
 };
