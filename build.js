@@ -2,7 +2,6 @@ const esbuild = require('esbuild');
 const { nodeExternalsPlugin } = require('esbuild-node-externals');
 const autoprefixer = require('autoprefixer');
 const postCssPlugin = require('@deanc/esbuild-plugin-postcss');
-const postCssConfig = require('./postcss.config');
 
 esbuild
   .build({
