@@ -13,6 +13,19 @@ esbuild
     platform: 'node',
     sourcemap: true,
     target: ['chrome91', 'edge90', 'firefox90', 'safari13'],
-    plugins: [nodeExternalsPlugin(), postCssPlugin(postCssConfig)],
+    plugins: [
+      nodeExternalsPlugin(),
+      postCssPlugin({
+        plugins: [
+          require('postcss-preset-env')({
+            stage: 3,
+            features: {
+              'nesting-rules': true,
+            },
+          }),
+          require('autoprefixer'),
+        ],
+      }),
+    ],
   })
   .catch(() => process.exit(1));
