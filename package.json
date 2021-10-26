@@ -1,8 +1,9 @@
 {
-  "name": "react-tag-input",
+  "name": "@eidellev/react-tag-input",
   "version": "1.0.0",
   "description": "React tag input component",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "node build && tsc",
     "storybook": "start-storybook -p 6006",
