@@ -16,7 +16,13 @@
     "type": "git",
     "url": "git+https://github.com/eidellev/react-tag-input.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "component",
+    "tag input",
+    "colors",
+    "suggestions"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

@@ -2,6 +2,8 @@
 
 ![screenshot](./screenshot.png)
 
+A lean, easily customizable, tag input React component.
+
 ## Installation
 
 ```shell
