@@ -4,6 +4,9 @@
   "description": "React tag input component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build && tsc",
     "storybook": "start-storybook -p 6006",
