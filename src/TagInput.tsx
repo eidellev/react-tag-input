@@ -82,17 +82,23 @@ export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInput
       {value?.map((tag) => (
         <span
           className="tag"
+          data-testid="tag"
           key={tag}
           style={colorize ? { backgroundColor: colorHash.hex(tag) } : {}}
         >
           {tag}
-          <button className="remove-tag-button" onClick={() => removeTag(tag)}>
+          <button
+            data-testid="remove-tag-button"
+            className="remove-tag-button"
+            onClick={() => removeTag(tag)}
+          >
             &times;
           </button>
         </span>
       ))}
 
       <input
+        data-testid="new-tag-input"
         className="new-tag"
         type="text"
         onKeyDown={onKeyDown}
@@ -103,7 +109,7 @@ export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInput
 
       <datalist id="tags">
         {options.map((option) => (
-          <option key={option} value={option}>
+          <option key={option} value={option} data-testid="option">
             {option}
           </option>
         ))}
