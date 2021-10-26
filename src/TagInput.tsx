@@ -41,7 +41,9 @@ export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInput
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
-    if (completeKeys.includes(event.key)) {
+    const { key } = event;
+
+    if (completeKeys.includes(key)) {
       const { value: newTagValue } = inputRef.current;
 
       if (!newTagValue.trim().length) {
@@ -56,6 +58,14 @@ export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInput
 
       inputRef.current.value = '';
       onChange([...value, newTagValue]);
+    }
+
+    if (key === 'Backspace') {
+      const { value: newTagValue } = inputRef.current;
+
+      if (!newTagValue.trim().length) {
+        onChange(value.slice(0, value.length - 1));
+      }
     }
   };
 
