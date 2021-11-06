@@ -44,13 +44,14 @@ export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInput
     const { key } = event;
 
     if (completeKeys.includes(key)) {
-      const { value: newTagValue } = inputRef.current;
-
-      if (!newTagValue.trim().length) {
-        return;
-      }
+      let { value: newTagValue } = inputRef.current;
+      newTagValue = newTagValue.trim();
 
       event.preventDefault();
+
+      if (!newTagValue.length) {
+        return;
+      }
 
       if (value.includes(newTagValue)) {
         return;
