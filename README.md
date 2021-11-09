@@ -37,6 +37,7 @@ import TagInput from '@eidellev/react-tag-input';
 - `options`(string[]) - A list of suggestions
 - `colorize`(boolean) - Should each tag be assigned a unique background color
 - `placeholder`(string) - Placeholder text
+- `completeKeys`(string[]) - A list of keys that trigger tag completion (the default are `Esc`, `Enter` and `,`)
 - `onChange`(function) - A callback that will be called when a tag is added or removed
 
 ## Customizing Styles
