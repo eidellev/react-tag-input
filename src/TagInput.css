@@ -3,6 +3,7 @@
   --radius: 4px;
   --focus: #86b7fe;
   --focus-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.25);
+  --tag-background: #888888;
 
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
@@ -15,6 +16,7 @@
   }
 
   & .tag {
+    background-color: var(--tag-background);
     color: white;
     margin-right: 2px;
     padding: 2px 8px;
