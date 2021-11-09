@@ -1,18 +1,43 @@
 import { useState } from 'react';
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { TagInput } from './TagInput';
 
 <Meta title="Components/TagInput" />
 
-export const TagInputStoryWrapper = () => {
+export const Basic = () => {
   const [value, setValue] = useState(['work', 'personal', 'school']);
   return (
     <TagInput
       value={value}
       onChange={(newValue) => setValue(newValue)}
       options={['project X', 'project Y']}
-      colorize
       placeholder="Enter a new tag"
+    />
+  );
+};
+
+export const Colorized = () => {
+  const [value, setValue] = useState(['work', 'personal', 'school']);
+  return (
+    <TagInput
+      value={value}
+      onChange={(newValue) => setValue(newValue)}
+      options={['project X', 'project Y']}
+      placeholder="Enter a new tag"
+      colorize
+    />
+  );
+};
+
+export const CustomCopmpleteKeys = () => {
+  const [value, setValue] = useState(['work', 'personal', 'school']);
+  return (
+    <TagInput
+      value={value}
+      onChange={(newValue) => setValue(newValue)}
+      options={['project X', 'project Y']}
+      placeholder="Enter a new tag"
+      completeKeys={['+']}
     />
   );
 };
@@ -20,5 +45,14 @@ export const TagInputStoryWrapper = () => {
 # Tag Input
 
 <Story name="Basic">
-  <TagInputStoryWrapper />
+  <Basic />
+</Story>
+
+<Story name="With Colors">
+  <Colorized />
+</Story>
+
+<Story name="Custom Complete Keys">
+  <CustomCopmpleteKeys />
+  <pre>* Enter a new tag and hit `+`</pre>
 </Story>

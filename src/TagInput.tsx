@@ -3,7 +3,7 @@ import ColorHash from 'color-hash';
 import './TagInput.css';
 
 const colorHash = new ColorHash();
-const completeKeys = ['Enter', 'Tab'];
+const defaultCompleteKeys = ['Enter', 'Tab', ','];
 
 export interface TagInputProps {
   /**
@@ -25,6 +25,10 @@ export interface TagInputProps {
    */
   placeholder?: string;
   /**
+   * Keys that create a new tag
+   */
+  completeKeys?: string[];
+  /**
    * Handle tag input changes
    */
   onChange: (value: string[]) => void;
@@ -37,9 +41,15 @@ export interface TagInputProps {
  ```
  */
 export const TagInput: React.FunctionComponent<TagInputProps> = (props: TagInputProps) => {
-  const { value = [], onChange, options = [], colorize, placeholder } = props;
+  const {
+    value = [],
+    onChange,
+    options = [],
+    colorize,
+    placeholder,
+    completeKeys = defaultCompleteKeys,
+  } = props;
   const inputRef = useRef<HTMLInputElement>(null);
-
   const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
     const { key } = event;
 
